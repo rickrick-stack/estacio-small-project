@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle, var(--bgc1), var(--bgc2), var(--bgc3), var(--bgc4));
+    animation: bg-animation 5s ease-in-out infinite alternate;
+    background-size: 200% 200%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.open-sans-<uniquifier> {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+:root{
+    --bgc1:#d6cece;
+    --bgc2:white;
+    --bgc3:#b0bcd3; 
+    --bgc4:#dad5d5;
+    --mainBoxbg:#adb8b8;
+    --lugarText:#5a89af;
+    --nameText:#3b4d5c;
+    --cardColor:#546363;
+    --bgCard:#a5a6a8;
+}
+body:has(#darkMode:checked){
+    --bgc1:#2c2c2c;
+    --bgc2:rgb(8, 8, 8);
+    --bgc3:#1b1b1b; 
+    --bgc4:#222122;
+    --mainBoxbg:#000000;
+    --lugarText:#b6b6b3a8;
+    --nameText:#dddcdbb4;
+    --cardColor:#546363;
+    --bgCard:rgb(18, 17, 19);
+}
+
+.mainBox {
+    margin: 10%;
+    padding: 5%;
+    border-radius: 50px;
+    width: 350px;
+    height: 700px;
+    display: flex;
+    background: linear-gradient(var(--mainBoxbg), transparent);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mainBoxFather,
+.foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto,
+.descricao,
+.lugar {
+    padding: 1%;
+    margin: 5%;
+    color: var(--lugarText);
+}
+
+.nome {
+    color: var(--nameText);
+}
+
+.nome,
+.descricao,
+.lugar,
+.card {
+    font-family: sans-serif;
+}
+
+.fotoDePerfil {
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    border: transparent;
+}
+
+@keyframes bg-animation {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
+}
+
+.card {
+    padding: 10%;
+    margin: 4%;
+    width: 120px;
+    height: 10px;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    color: var(--cardColor);
+    justify-content: center;
+    border-radius: 10px;
+    background-color: var(--bgCard);
+    transition: 0.4s;
+
+    &:hover {
+        background-color: #d5e1e2;
+        transform: scale(1.2);
+
+    }
+}
